@@ -1,5 +1,4 @@
-const {Movie, validate} = require('../models/movie'); 
-const {Movie, validate} = require('../models/movie'); 
+const {Movie, validate} = require('../models/movie');  
 const {Category} = require('../models/category');
 const mongoose = require('mongoose');
 const express = require('express');

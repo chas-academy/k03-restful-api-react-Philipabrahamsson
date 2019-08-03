@@ -1,17 +1,9 @@
 const Joi = require('joi');
+const {Category} = require('../models/category');
 const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
 
-
-const Category = mongoose.model('Category', new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-    minlength: 5,
-    maxlength: 50
-  }
-}));
 
 router.get('/', async (req, res) => {
   const categories = await Category.find().sort('name');

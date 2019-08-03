@@ -1,6 +1,6 @@
 const Joi = require('joi');
 const mongoose = require('mongoose');
-const {categorySchema} = require('./genre');
+const {categorySchema} = require('./category');
 
 const Movie = mongoose.model('Movies', new mongoose.Schema({
   title: {
