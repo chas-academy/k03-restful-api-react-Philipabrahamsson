@@ -16,12 +16,19 @@ const HandleSearch = ({ updateMovies }) => {
       .then(data => updateMovies(data.results))
       .catch(err => console.error(err))
   }
+  
+  const handleEnterPressed = (e) => {
+    if (e.key === 'Enter') {
+      search()
+    }
+  }
 
   return (
     <div style={{ width: '95%', display: 'flex', justifyContent: 'center' }}>
       <div style={{ width: '85%', flexGrow: '1' }}>
         <input
           onChange={handleMovieQueryInput}
+          onKeyDown={handleEnterPressed}
           value={movieQuery}
           placeholder='Search for a movie'
           style={
